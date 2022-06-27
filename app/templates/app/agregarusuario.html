@@ -1,0 +1,45 @@
+
+{%extends 'app/base.html'%}
+{%load static%}
+{% load crispy_forms_tags %}
+
+
+{% block contenido %}
+  
+
+<body>
+    
+    
+    <div class="container mt-5">
+        <div class="row mt-5">
+            <div class="col-lg-12 mt-5">
+                <form action="" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <table>
+                        {{  form|crispy  }}
+                    </table>
+                    <input type="submit" class="btn btn-success" value="guardar">
+                </form>
+                {% if messages %}
+                    {% for msj in messages %}
+                        <script>
+                            Swal.fire({
+                                title: 'Guardado!',
+                                text: '{{ msj }}',
+                                icon: 'success',
+                                showConfirmButton: false,
+                                timer: 2000
+                            });
+                        </script>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>   
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.8/sweetalert2.css" integrity="sha512-n7nFZrzrpAWFDeQpyGwpH2W6maWlysBPf0cP5qf0xntjmH6R1QDg3ABfRVj7dTHWDmcTfLzmAG9PDPDdVd6odQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.8/sweetalert2.min.js" integrity="sha512-ySDkgzoUz5V9hQAlAg0uMRJXZPfZjE8QiW0fFMW7Jm15pBfNn3kbGsOis5lPxswtpxyY3wF5hFKHi+R/XitalA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+{%endblock%}    

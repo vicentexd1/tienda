@@ -1,0 +1,42 @@
+{%extends 'app/base.html'%}
+{%load static%}
+
+{% block contenido %}
+<body>
+
+    
+    
+    <div class="container mt-5">
+    
+        <div class="row mt-5">
+            {% for aux in listaproductos %} 
+            <div class="col-sm-4">
+                <div class="card mt-5">
+                {% if aux.imagen %}
+                <img src="{{ aux.imagen.url }}" alt="" width="300" height="220">
+                {% else %}
+                 <img src="{%static 'app/img/tierra de hoja.webp'%}" alt="" width="300" height="220">
+                {% endif %}
+                    
+                    <div class="info-card">
+                        <h4>{{aux.nombre}}</h4>
+                        <p>{{aux.tipo}}</p>
+                        <p>{{aux.codigo}}</p>
+                        <img src="" alt="">
+                        <p class="precio">{{aux.precio}} <span class="u-pull-rigth">$13000</span></p>
+                        <form action="" method="POST">
+                            {% csrf_token %}
+                            <input type="hidden" name="codigo_carrito" id="codigo_carrito" value="{{ aux.codigo }}">
+                            <input type="hidden" name="nombre_producto" id="nombre_producto" value="{{ aux.nombre }}">
+                            <input type="hidden" name="precio_producto" id="precio_producto" value="{{ aux.precio }}">
+                            <input type="hidden" name="imagen_producto" id="imagen_producto" value="{{ aux.imagen }}">
+                            <input type="submit" value="Agregar carrito" style="cursor:pointer" class="u-full-width button-primary button input agregar-carrito">
+                        </form>
+                        
+                    </div>
+                </div>           
+            </div>
+            {% endfor %}  
+        </div>
+    </div>    
+{%endblock%}    

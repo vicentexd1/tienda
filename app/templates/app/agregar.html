@@ -1,0 +1,40 @@
+{%extends 'app/base.html'%}
+{%load static%}
+{% load crispy_forms_tags %}
+
+{% block contenido %}
+  
+
+<body>
+    
+
+    
+    <div class="container mt-5">
+        <div class="row mt-5">
+            <div class="col-lg-12 mt-5">
+                <form action="" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <table>
+                        {{  form|crispy  }}
+                    </table>
+                    <input type="submit" class="btn btn-success" value="guardar">
+                </form>
+                {% if messages %}
+                    {% for msj in messages %}
+                        <script>
+                            Swal.fire({
+                                title: 'Guardado!',
+                                text: '{{ msj }}',
+                                icon: 'success',
+                                showConfirmButton: false,
+                                timer: 2000
+                            });
+                        </script>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+
+{%endblock%}    

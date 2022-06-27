@@ -1,0 +1,23 @@
+.container{
+    width: 100%;
+      
+}
+
+h2{
+
+    text-align: center;
+    color: rgb(245, 245, 247);
+    font-size: 40px;
+    margin-top: 12%;
+}
+
+@media(min-width:768px)
+  {
+.formulario{
+        margin:auto;
+        width: 500px;
+        margin-top: 150px;
+        border-radius: 2%;
+    }
+}
+

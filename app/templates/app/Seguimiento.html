@@ -1,0 +1,38 @@
+{%extends 'app/base.html'%}
+{%load static%}
+
+{% block contenido %}
+
+<body>
+    <div class="container mt-5">
+        <div class="container mt-5 pt-5">
+            <div class="container align-items-center mt-5">
+                <h2> Seguimiento de la Compra <i class="fa-solid fa-cart-shopping"></i></h2>
+                    <table border="3" class="Table table-hover table-dark table-striped align-items-center mt-5">
+                        <thead class="align-items-center">
+                            <tr>
+                                <th> Producto Empaquetado </th>
+                                <th> Producto Enviado </th>
+                                <th> Producto Recibido </th>
+                                <th> Producto Retirado </th>
+                                <th> Enviado </th>
+                            </tr>
+                        </thead>
+        
+                        <tbody>
+                            <tr>
+                                <td> Producto Decoración </td>
+                                <td> Se envió el 13/09/2022 </td>
+                                <td> Se recibió con éxito </td>
+                                <td> Cliente Satisfecho </td>
+                                <td> <img src="{% static 'app/img/a.png' %}" alt="" width="80px"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>        
+        </div>
+    </div>
+    
+</body>
+
+{%endblock%} 

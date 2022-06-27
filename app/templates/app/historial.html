@@ -1,0 +1,36 @@
+{%extends 'app/base.html'%}
+{%load static%}
+
+{% block contenido %}
+<body>
+    <h2>Historial de compra <i class="fa-solid fa-clipboard-list"></i></h2>
+    {% for aux in listaCarrito %}    
+    <div class="container">
+                   
+        <table border = "3" class="table table-hover table-dark table-striped" >
+        <thead>
+            <tr>
+            <th>Codigo Producto</th> 
+            <th>Imagen Producto</th>
+            <th>Nombre</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+            <th></th>
+            
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>{{aux.codigo_carrito}}</td> 
+            <td><img src="{{ aux.imagen.url }}" alt="" width="300" height="220"></td>
+            <td>"{{aux.nombre_producto}}"</td> 
+            <td>3</td>
+            <td>"{{aux.precio_producto}}"</td>
+            </tr>            
+        </tbody>
+        </table>
+    </div>
+    {% endfor %}
+</body>
+<link rel="stylesheet" href="{%static 'app/css/style2.css'%}">
+{%endblock%}

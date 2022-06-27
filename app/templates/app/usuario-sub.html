@@ -1,0 +1,43 @@
+{%extends 'app/base.html'%}
+{%load static%}
+
+{% block contenido %}
+    <div class="container-fluid mt-5">
+        <h2 class="subtitulo mt-5 pt-5 text-white">Cuenta</h2>
+        <div class="container tabla mt-3 text-white">
+            <h4>Detalles</h4>
+            <p>A continuación se muestran los detalles de su cuenta:</p>            
+            <table class="datos-tabla text-white">
+              
+              <tbody>
+                <tr>
+                  <th>Nombre usuario: </th>
+                  <td class="text-white">{{ user.username}}</td>
+                  <td>                    </td>
+                </tr>
+                <tr>
+                  <th>E-mail:</th>
+                  <td>{{user.email}}</td>
+                  <td>                    </td>
+                </tr>
+                <tr>
+                  <th>Nombre: </th>
+                  <td class="text-white">{{user.first_name}}</td>
+                  <td>                    </td>
+                </tr>
+                <tr>
+                  <th>Apellido: </th>
+                  <td class="text-white">{{user.last_name}}</td>
+                  <td>                    </td>
+                </tr>
+                <tr>
+                    <th><button type="button" class="btn btn-success">Suscribirse</button></th>
+                    <td>La suscripción trae un beneficio de 5% de descuento en el total de la compra!</td>
+                    <td>                    </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+    </div>
+{%endblock%}    
+   

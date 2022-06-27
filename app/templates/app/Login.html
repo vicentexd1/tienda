@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+{%load static%}
+{% load crispy_forms_tags %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Jardinería</title>
+    <link rel="stylesheet" href="{%static 'app/css/style.css'%}">
+    <script src="https://kit.fontawesome.com/6a3ac9f339.js" crossorigin="anonymous"></script>   
+</head>
+<body>
+    <form class="formulario" action="{%url 'login'%}">
+        <h1>Iniciar Sesion</h1>
+        <div class="contenedor">
+            <div class="input-contenedor">
+                <i class="fa-solid fa-envelope icon"></i>
+                <input type="text" placeholder="Correo electronico">
+
+            </div>
+            <div class="input-contenedor">
+                <i class="fa-solid fa-lock icon"></i>
+                <input type="password" placeholder="Contraseña">
+
+            </div>
+            <input  type="submit" value="Iniciar Sesion" class="button">
+            
+            <p>¿No tienes una cuenta? <a class="link"href="{%url 'Registrarse'%}">Crea una cuenta.</a></p>
+        </div>
+    </form>
+        
+    
+</body>
+</html>

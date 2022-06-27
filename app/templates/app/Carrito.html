@@ -1,0 +1,61 @@
+{%extends 'app/base.html'%}
+{%load static%}
+
+{% block contenido %}
+
+<body>
+    
+    <h2>Carrito <i class="fa-solid fa-cart-shopping"></i></h2>
+    {% for aux in listaCarrito %}    
+    <div class="container">
+                   
+        <table border = "3" class="table table-hover table-dark table-striped" >
+        <thead>
+            <tr>
+            <th>Codigo Producto</th> 
+            <th>Imagen Producto</th>
+            <th>Nombre</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+            <th></th>
+            
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>{{aux.codigo_carrito}}</td> 
+            <td><img src="{{ aux.imagen.url }}" alt="" width="300" height="220"></td>
+            <td>"{{aux.nombre_producto}}"</td> 
+            <td>3</td>
+            <td>"{{aux.precio_producto}}"</td>
+            <td><a onclick="confirmDelete2({{ aux.codigo_carrito }})" class="btn btn-danger">Eliminar</a></td>
+            </tr>            
+        </tbody>
+        </table>
+    </div>
+    {% endfor %}
+
+    
+    <div class="container">
+        <table border = "3" class="table table-hover table-dark table-striped">
+            <thead>
+                <tr>
+                    <th> Total a pagar: $  </th> 
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    
+                    </tr>
+            </thead>
+            
+        </table>
+        <button type="submit" class="btn btn-success mt-2" onclick="location.href='http://127.0.0.1:8000/successful/'">Pagar</button>
+    </div>
+    
+
+
+<link rel="stylesheet" href="{%static 'app/css/style2.css'%}">
+
+{%endblock%}    

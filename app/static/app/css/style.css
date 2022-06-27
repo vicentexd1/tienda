@@ -1,0 +1,153 @@
+
+body{
+    background: url(../img/uwu.jpg) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.inicio-sesion{
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(31, 139, 13, 0.67);
+    padding: 70px 30px;
+    font-family: 'calibri', sans-serif;
+    text-transform: uppercase;
+    border-radius: 50%;
+    animation: animacion 2s linear infinite;
+    text-align: center;
+}
+
+@keyframes animacion {
+    0%{
+        box-shadow: 0 0 0 0 rgb(29, 171, 209, .6), 0 0 0 0 rgb(29, 171, 209, .6);
+    }
+
+    30%{
+        box-shadow: 0 0 0 70px rgb(29, 171, 209, 0), 0 0 0 0 rgb(29, 171, 209, .6);
+    }
+
+    65%{
+        box-shadow: 0 0 0 70px rgb(29, 171, 209, 0), 0 0 0 0 rgb(29, 171, 209, .6);
+    }
+
+    100%{
+        box-shadow: 0 0 0 0 rgb(29, 171, 209, 0), 0 0 0 30px rgb(29, 171, 209, 0);
+    }
+}
+
+.navbar-expand-sm{
+    background-color: rgba(0, 0, 0, 0.796);
+}
+
+.nombre-tienda{
+    color: pink;
+}
+
+.footer{
+    background-color: rgba(0, 0, 0, 0.796);
+    color: gray;
+}
+
+.face:hover{
+    color: white;
+}
+
+.insta:hover{
+    color: white;
+}
+
+.twitter:hover{
+    color: white;
+}
+
+/* la parte que hizo el vicente */
+
+.contenedor{
+    width: 100%;
+    padding: 15px;
+
+}
+
+.formulario{
+    background-color: aliceblue;
+    margin-top: 150px;
+    padding: 3px;
+
+}
+h1{
+    text-align: center;
+    color: blue;
+    font-size: 40px;
+
+}
+
+input[type="text"],
+input[type="password"]{
+    font-size: 20px;
+    width: 82%;
+    padding: 10px;
+    border: none;
+}
+
+.input-contenedor{
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+
+}
+.icon {
+    min-width: 50px;
+    text-align: center;
+    color: #999;
+}
+
+.button{
+    border: none;
+    width: 100%;
+    color: white;
+    background-color: blue;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button:hover{
+    background: cadetblue;
+}
+
+p{
+    text-align: center;
+}
+
+.link{
+    text-decoration: none;
+    color: blue;
+    font-weight: 600;
+}
+
+.link:hover{
+    color: cadetblue;
+}
+
+
+@media(min-width:768px)
+  {
+.formulario{
+        margin:auto;
+        width: 500px;
+        margin-top: 150px;
+        border-radius: 2%;
+    }
+}
+
+

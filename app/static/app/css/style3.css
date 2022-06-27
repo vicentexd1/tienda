@@ -1,0 +1,31 @@
+.progress{
+    margin: 150px auto;
+}
+
+.progress img{
+    width: 80px;
+    margin-bottom: 40px;
+    
+}
+ul{
+    text-align: center;
+}
+ul li{
+    display: inline-block;
+    width: 200px;
+}
+ul li .fa{
+    background-color: green;
+    width: 16px;
+    height: 16px;
+    color: white;
+    border-radius: 50px;
+}
+
+
+
+.footer{
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+}

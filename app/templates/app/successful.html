@@ -1,0 +1,20 @@
+{%extends 'app/base.html'%}
+{%load static%}
+
+{% block contenido %}
+<body>
+    <div class="container mt-5">
+        <div class="container mt-5">
+            <div class="container mt-5">
+                <h1>Compra realizada exitosamente!<i class="fa-light fa-party-horn"></i></h1>
+                <center>
+                    <img src="{% static 'app/img/hola.png' %}" alt="" width="80px"
+                </center>
+                <h4>Desea ver el seguimiento de su pedido? Presiona aqui ! <i class="fa-light fa-party-horn"></i></h4>
+                <button type="submit" class="btn btn-success mt-2" onclick="location.href='http://127.0.0.1:8000/seguimiento/'">Seguimiento!</button>
+            </div>    
+        </div>
+    </div>
+</body>
+<link rel="stylesheet" href="{%static 'app/css/style2.css'%}">
+{%endblock%}

@@ -1,0 +1,21 @@
+.progressbar{
+    margin: 300px auto;
+}
+.progressbar img{
+    width: 80px;
+    
+}
+ul{
+    text-align: center;
+}
+ul li{
+    display: inline-block;
+    width: 200px;
+}
+ul li .fa{
+    background: #ccc;
+    width: 16px;
+    height: 16px;
+    color: #fff;
+    border-radius: 50%;
+}
